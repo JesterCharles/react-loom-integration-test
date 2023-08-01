@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-mediaconnect": "^3.382.0",
     "@loomhq/loom-embed": "^1.5.0",
     "@loomhq/record-sdk": "^2.36.18",
     "@testing-library/jest-dom": "^5.17.0",
