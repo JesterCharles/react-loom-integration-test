@@ -22,6 +22,5 @@ jobs:
           application_name: test-react-loom
           environment_name: Test-react-loom-env
           version_label: ${{ github.sha }}
-          existing_bucket_name: elasticbeanstalk-us-east-1-842413253702
           region: us-east-2
           deployment_package: deploy.zip
