@@ -11,6 +11,7 @@ export default function App() {
   useEffect(() => {
     async function setupLoom() {
       const { supported, error } = await isSupported();
+      localStorage.setItem('title', 'Charles Jester Testing Local Storage to set Video Title')
 
       if (!supported) {
         console.warn(`Error setting up Loom: ${error}`);
@@ -30,6 +31,7 @@ export default function App() {
       const sdkButton = configureButton({ element: button });
 
       sdkButton.on("insert-click", async (video) => {
+        video.title = localStorage.getItem('title');
         const { html } = await oembed(video.sharedUrl, { width: 400 });
         setVideoHTML(html);
       });
